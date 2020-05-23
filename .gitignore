@@ -128,5 +128,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# VS Code
 .vscode/
+
+# .gif Plots
+*.gif
 
