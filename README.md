@@ -10,7 +10,8 @@ Option 1:
 
 Option 2:
 * The idea is as follows: We select some particular functions that are interesting in the context of optimization methods. For each of those functions, we create a notebook that includes a description of the function, the discussion of particle swarm optimization when applied to this problem as well as the results. Visualizations are always very much appreciated. See the example notebooks as reference on how to implement these ideas.
-* The current selection of functions is:
+
+The current selection of functions is:
   * Rosenbrock https://en.wikipedia.org/wiki/Rosenbrock_function
   * Himmelblau https://en.wikipedia.org/wiki/Himmelblau%27s_function
   * ...
