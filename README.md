@@ -1,11 +1,23 @@
 # Particle Swarm Optimization
-This repository includes sample applications and use cases of particle swarm optimizations. It was created as part of the course 'Optimization Methods for Engineers' at ETH Zürich.
+This repository includes sample applications and use cases of optimization methods, mainly particle swarm optimization. It was created as part of the course 'Optimization Methods for Engineers' at ETH Zürich.
 
-The idea is as follows: We select some particular functions that are interesting in the context of optimization methods. For each of those functions, we create a notebook that includes a description of the function, the discussion of particle swarm optimization when applied to this problem as well as the results. Visualizations are always very much appreciated. See the example notebooks as reference on how to implement these ideas.
+Option 1:
+* General discussion of NM, SA, PSO for functions in the context of optimization methods 
+  * strengths & weaknesses, comparison
+* Analyze different optimizers for our implementation of a neural net (Nelder Mead, Simulated Annealing, PSO)
+  * General usability, performance, convergence rate
+  * Try to see strengths & weaknesses for this specific application
 
-The current selection of functions is:
-* Rosenbrock https://en.wikipedia.org/wiki/Rosenbrock_function
-* ...
+Option 2:
+* The idea is as follows: We select some particular functions that are interesting in the context of optimization methods. For each of those functions, we create a notebook that includes a description of the function, the discussion of particle swarm optimization when applied to this problem as well as the results. Visualizations are always very much appreciated. See the example notebooks as reference on how to implement these ideas.
+* The current selection of functions is:
+  * Rosenbrock https://en.wikipedia.org/wiki/Rosenbrock_function
+  * Himmelblau https://en.wikipedia.org/wiki/Himmelblau%27s_function
+  * ...
+
+What holds for both: find good heuristics (e.g. good selection of hyperparameters) for optimizers.
+
+
 
 ## Developing
 
