@@ -62,9 +62,13 @@
 
 3. **Advantages/Disadvantages**
    
-   | Advantages                    | Disadvantages                    |
-   | ----------------------------- | -------------------------------- |
-   | - TBD                         | TBD                              |
+   | Advantages                                           | Disadvantages                                                       |
+   | -----------------------------                        | --------------------------------                                    |
+   | - does not require gradient                          | - lack of convergence theory, properties                            |
+   | - relatively simple to understand, implement and use | - slow convergence (esp. compared to other gradient based methods)  |
+   | - often only needs two evaluations per iteration     | - can take enormous amount of iterations with little improvement    |
+   | - proven to work well in practice                    | - can get stuck in local minima                                     |
+   | - can deal with any number of variables              |
 
 4. **Notes on Python implementation**
    
@@ -85,7 +89,7 @@
       sigma = 0.5
    ```
    Here, alpha = rho, chi = beta and psi = gamma.
-   
+
 ## Simulated Annealing
    1. Description
    2. PseudoCode
