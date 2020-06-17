@@ -12,7 +12,7 @@
 1. **Description**
    ![](simplex.png)
 
-   Nelder-Mead [NM] method (also called Downhill Simplex) uses a *simplex*, i.e. the 'most simple volume' in the parameter space with **N+1** corner points **p_j**. In every iteration of the algorithm, the point with the worst (that is, maximum) fitness evaluation gets replaced by a better one. If the simplex gets sufficiently small, the fitness values provide a reasonable approximation of the gradient.
+   [Nelder-Mead](https://en.wikipedia.org/wiki/Nelder%E2%80%93Mead_method) [NM] method (also called Downhill Simplex) uses a *simplex*, i.e. the 'most simple volume' in the parameter space with **N+1** corner points **p_j**. In every iteration of the algorithm, the point with the worst (that is, maximum) fitness evaluation gets replaced by a better one. If the simplex gets sufficiently small, the fitness values provide a reasonable approximation of the gradient.
 
 2. **Algorithm/Pseudocode**
    
@@ -68,7 +68,8 @@
    | - relatively simple to understand, implement and use | - slow convergence (esp. compared to other gradient based methods)  |
    | - often only needs two evaluations per iteration     | - can take enormous amount of iterations with little improvement    |
    | - proven to work well in practice                    | - can get stuck in local minima                                     |
-   | - can deal with any number of variables              |
+   | - can deal with any number of variables              | - very much depends on initialization of simplex (too small can lead to local search) |
+   | - easily adaptable with e.g. random restart
 
 4. **Notes on Python implementation**
    
