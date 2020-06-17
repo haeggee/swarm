@@ -9,12 +9,12 @@
 ###
 
 ## Nelder Mead
-1. Description
+1. **Description**
    ![](simplex.png)
 
    Nelder-Mead [NM] method (also called Downhill Simplex) uses a *simplex*, i.e. the 'most simple volume' in the parameter space with **N+1** corner points **p_j**. In every iteration of the algorithm, the point with the worst (that is, maximum) fitness evaluation gets replaced by a better one. If the simplex gets sufficiently small, the fitness values provide a reasonable approximation of the gradient.
 
-2. Algorithm/Pseudocode
+2. **Algorithm/Pseudocode**
    
    Denote the following definitions:
    * the best point: **F_best = F(p_best)**
@@ -60,29 +60,32 @@
 
    A common choice of parameters is alpha = 1, beta = 2, gamma = 0.5 = sigma.
 
-3. Advantages/Disadvantages
+3. **Advantages/Disadvantages**
    
    | Advantages                    | Disadvantages                    |
    | ----------------------------- | -------------------------------- |
    | - TBD                         | TBD                              |
 
-4. Notes on Python implementation
-```
-if adaptive:
-    rho = 1
-    chi = 1 + 2/N
-    psi = 0.75 - 1/(2*N)
-    sigma = 1 - 1/N
-else:
-    rho = 1
-    chi = 2
-    psi = 0.5
-    sigma = 0.5
+4. **Notes on Python implementation**
+   
+   We are using the method implementing Nelder-Mead provided by the SciPy-Optimize library: https://docs.scipy.org/doc/scipy/reference/optimize.minimize-neldermead.html
 
-nonzdelt = 0.05
-zdelt = 0.00025
-```
+   It is based on basic NumPy and implements the exact algorithm described above (the source code can be found under the link). Interestingly, it also uses the standard choice of parameters, but is has an additional *adaptive* option:
 
+   ```
+   if adaptive:
+      rho = 1
+      chi = 1 + 2/N
+      psi = 0.75 - 1/(2*N)
+      sigma = 1 - 1/N
+   else:
+      rho = 1
+      chi = 2
+      psi = 0.5
+      sigma = 0.5
+   ```
+   Here, alpha = rho, chi = beta and psi = gamma.
+   
 ## Simulated Annealing
    1. Description
    2. PseudoCode
