@@ -42,7 +42,69 @@ zdelt = 0.00025
 ```
 
 ## Simulated Annealing
-   1. Description
-   2. PseudoCode
-   3. Advantages/Disadvantages
-   4. Notes on Python implementation
+   
+   1. Description:
+       
+       ##### **The basic iteration:**
+       At each step, the simulated annealing heuristic considers some neighboring state $s^{*}$ of the current        state $s$, and probabilistically decides between moving the system to state $s^{*}$ or staying in-state        $s$. These probabilities ultimately lead the system to move to states of lower energy.
+       
+       ##### **The neighbours of a state:**
+       Optimization of a solution involves evaluating the neighbours of a state of the problem, which are new        states produced through conservatively altering a given state. The well-defined way in which the states        are altered to produce neighbouring states is called a "move", and different moves give different sets        of neighbouring states. These moves usually result in minimal alterations of the last state, in an            attempt to progressively improve the solution through iteratively improving its parts.
+       
+       ##### **Acceptance probabilities:**
+       The probability of making the transition from the current state $s$ to a candidate new state $s'$ is          specified by an acceptance probability function $P(e,e',T)$, that depends on the energies $e=E(s)$ and        $e'=E(s')$ of the two states, and on a global time-varying parameter $T$ called the temperature. States        with a smaller energy are better than those with a greater energy. The probability function $P$ must be        positive even when $e'$ is greater than $e$. This feature prevents the method from becoming stuck at a        local minimum that is worse than the global one. 
+       
+       When $T$ tends to zero, the probability $P(e,e',T)$ must tend to zero if $e'>e$ and to a positive value        otherwise. For sufficiently small values of $T$, the system will then increasingly favor moves that go        "downhill" (i.e., to lower energy values), and avoid those that go "uphill." With $T=0$ the procedure          reduces to the greedy algorithm, which makes only the downhill transitions.
+
+       In the original description of simulated annealing, the probability $P(e,e',T)$ was equal to 1 when            $e'<e$ i.e., the procedure always moved downhill when it found a way to do so, irrespective of the            temperature. Many descriptions and implementations of simulated annealing still take this condition as        part of the method's definition. However, this condition is not essential for the method to work.
+
+       The $P$ function is usually chosen so that the probability of accepting a move decreases when the              difference $e'-e$ increases that is, small uphill moves are more likely than large ones. However, this        requirement is not strictly necessary, provided that the above requirements are met.
+
+       Given these properties, the temperature $T$ plays a crucial role in controlling the evolution of the          state $s$ of the system with regard to its sensitivity to the variations of system energies. To be            precise, for a large $T$, the evolution of $s$ is sensitive to coarser energy variations, while it is          sensitive to finer energy variations when $T$ is small.
+       
+       ##### **The annealing schedule:**
+       The name and inspiration of the algorithm demand an interesting feature related to the temperature            variation to be embedded in the operational characteristics of the algorithm. This necessitates a              gradual reduction of the temperature as the simulation proceeds. The algorithm starts initially with          $T$ set to a high value (or infinity), and then it is decreased at each step following some annealing          schedule—which may be specified by the user, but must end with $T=0$ towards the end of the allotted          time budget. In this way, the system is expected to wander initially towards a broad region of the            search space containing good solutions, ignoring small features of the energy function; then drift            towards low-energy regions that become narrower and narrower; and finally move downhill according to          the steepest descent heuristic.
+       
+       For any given finite problem, the probability that the simulated annealing algorithm terminates with a        global optimal solution approaches 1 as the annealing schedule is extended. This theoretical result,          however, is not particularly helpful, since the time required to ensure a significant probability of          success will usually exceed the time required for a complete search of the solution space.
+       
+       <br/>
+       
+   2. PseudoCode:
+   
+      **Denote the following parameters:**
+       * $E(\;)$ = the energy (goal) function
+       * $neighbour(\;)$ = the candidate generator procedure
+       * $P(\;)$ = the acceptance probability function
+       * $temperature(\;)$ = the anealing schedule 
+       
+       <br/>
+     
+      **Algorithm:** 
+       * Let $s = s_0$
+       * For $k = 0$ trough $k_{max}(exclusive)$:
+            * $T \leftarrow temperature((k+1)/k_{max})$
+            * Pick a random neighbour, $s_{new} \leftarrow neighbour(s)$
+            * If $P(E(s), E(s_{new}),T) \geq random(0,1)$:
+               * $s \leftarrow s_{new}$
+       * Output: the final state $s$ 
+       
+       <br/>
+       
+   3. Advantages/Disadvantages:
+   
+       * Advantages:
+           * Simulated annealing is used to find a close-to-optimal solution among an extremely large (but                  finite) set of potential solutions. It is particularly useful for combinatorial optimization                  problems defined by complex objective functions that rely on external data.  
+           * TBD
+       
+       <br/>
+       
+       * Disadvantages:
+           * TBD
+           
+           <br/>
+           
+   4. Notes on Python implementation:
+   
+       Possible library: https://github.com/perrygeo/simanneal
+       
+       TBD
