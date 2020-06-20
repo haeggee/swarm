@@ -1,6 +1,55 @@
 # **Optimization Methods for Engineers** - Paricle Swarm Optimization, Nelder-Mead, Simulated Annealing
 This repository includes sample applications and use cases of optimization methods, mainly particle swarm optimization. It was created as part of the course 'Optimization Methods for Engineers' at ETH Zürich.
 
+#### Part 1: Analysing PSO on typical test functions for optimization
+##### **Test function 1 (Rastrigin?):**
+1. Optimization with PSO:
+    * Optimization
+    * Plot cost history
+    * Visualization in 2D
+    * Visualization in 3D 
+    * Analysis of good choice of hyperparameters 
+    
+    
+2. Comparison with Nelder Mead:
+    * Performance
+    * Convergence rate
+    * Complexity
+    
+    
+3. Comparison with Simulated Annealing: 
+    * Performance
+    * Convergence rate
+    * Complexity
+
+
+##### **Test function 2 (TBD):**
+1. Optimization with PSO:
+    * Optimization
+    * Plot cost history
+    * Visualization in 2D
+    * Visualization in 3D 
+    * Analysis of good choice of hyperparameters 
+    
+    
+2. Comparison with Nelder Mead:
+    * Performance
+    * Convergence rate 
+    * Complexity
+    
+    
+3. Comparison with Simulated Annealing: 
+    * Performance
+    * Convergence rate
+    * Complexity
+
+##### **Discussion:**
+1. Strengths
+2. Weaknesses
+
+#### Part 2: Analysing PSO on a neural network
+
+
 Option 1:
 * General discussion of NM, SA, PSO for functions in the context of optimization methods 
   * strengths & weaknesses, comparison
