@@ -35,3 +35,7 @@ Credits belong to:
 * The contributors to the PySwarm Toolkit: https://github.com/ljvmiranda921/pyswarms
 * Code from Sebastian Curi and Andreas Krause, based on Jaques Grobler (sklearn demos). This was taken from the Introduction to Machine Learning lecture at ETH.
 
+# License
+All code in this repository is published under the terms of the [MIT License](LICENSE)
+
+© [Alexander Haegele](https://github.com/haeggee), [Richard von der Horst](https://github.com/RichardVDH), [Paul Elvinger](https://github.com/elvingerpaul)
