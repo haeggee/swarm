@@ -20,13 +20,14 @@
    * ***a_ind***, ***a_grp***, ***w*** swarm topology and randomness
    * ***R_ind(i)***, ***R_grp(i)*** random number or matrix
    
-   Each particle feels forces towards ***p_m,best***, ***p_(m,best neigh)*** and possible further forces that coordinate forces or forbid particles to leave the search domain, etc.
+   Each particle feels forces towards ***p_m,best***, ***p_(m,best neigh)*** and possible further forces that coordinate forces or forbid particles to leave the search domain, etc. In a first attempt all the above forces could for example be initialized through physical principles that keep take the distance between particles into consideration.
 
    * Distribute *M* particles on the fitness landscape *D_s*
    * for each iteration i update each ***v_m(i+1)*** and ***p_m(i+1)***:
-      * v_m(i+1) = w * v_m(i) // inertia or momentum
-                 + a_ind * R_ind(i) * (p_m,best - p_m(i)) // towards individual best
-                 + a_grp * R_grp(i) * (p_(m,best neigh) - p_m(i)) // towards group best
+      * v_m(i+1) = w * v_m(i) + a_ind * R_ind(i) * (p_m,best - p_m(i)) + a_grp * R_grp(i) * (p_(m,best neigh) - p_m(i))
+         * w * v_m(i) : inertia or momentum
+         * a_ind * R_ind(i) * (p_m,best - p_m(i)) : towards the individual best
+         * a_grp * R_grp(i) * (p_(m,best neigh) - p_m(i)) : towards the group best
       * p_m(i+1) = p_m(i) + v_m(i+1)
       
       forces increase with larger distances
@@ -34,7 +35,22 @@
       
    
 3. Advantages/Disadvantages
+
+   * Advantages : 
+      * can solve parameter optimization problems with correct implementation and well set tuning screws
+      * more resilience to local optimum problem compared to optimization methods as simulated annealing
+      * no need for the use of gradients, thus robust for discontinuous or noisy functions
+      
+   * Disadvantages :
+      * high number of options that need to be decided (weighthing of different forces, distance behavior, limit velocity or not, number of neighbors, what to do with particles that leave the fitness landscape, etc.)
+      * large number of fitness evaluations
+      * its success relies on some optimistic expectations (swarm concentrates towards optimum, avoid bad regions automatically, randomnes in each particle sufficient to find global optimum, etc. )
+      
+
+
 4. Notes on Python implementation
+
+We are going to use the Particle Swarm optimizer provided by the [PySwarms library](https://pyswarms.readthedocs.io/en/latest/).
 
 ###
 
