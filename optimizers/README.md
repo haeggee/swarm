@@ -2,7 +2,37 @@
 
 ## Particle Swarm Optimization
 1. Description
+
+   [Particle Swarm Optimization](https://en.wikipedia.org/wiki/Particle_swarm_optimization#:~:text=In%20computational%20science%2C%20particle%20swarm,a%20given%20measure%20of%20quality.) [PSO] method is a population-based optimizer. Instead of improving a single point in the fitness lansdscape, they work with an ensemble of M points (called the population or generation). The goal of one iteration will be to improve the actual generation as a whole such that after each step at least one member of the new generation shows a better fitness. Patricles should interact and profit from each other, find the optimum together and produce the next generation together.
+   
+   PSO works with many *particles* moving around in the fintess landscapes with both individual and global goals. Each particle has an actual position ***p_m***, velocities ***v_m*** and eventual accelerations ***a_m*** with *m*=1,...*M*. Since any position in the fitness landscape is associated with a possible solution of the optimization problem, each particle in this context is also a potential solution. However the velocity of the particle is not an attribute of the solution itself but rather an attribute of the underlying process consisting of *M* particles walking through the fitness landscape. We additionally maintain the best position of each particle ***p_m,best*** so far and the global optimum postion ***p_global*** as the best of all ***p_m,best***.
+   
+   
 2. PseudoCode
+
+   Denote the following definitions:
+   * ***p_m(i)*** a particle's position in iteration i
+   * ***v_m(i)*** a particle's velocity in iteration i
+   * ***F_m(i)*** a particle's fitness evaluation in iteration i
+   * ***p_m,best*** a particle's best fitness evaluation so far
+   * ***p_global,best*** entire swarm's best fitness so far
+   * ***p_m,best neigh(i)*** the best fitness of a particle's neighborhood (each particle has a defined neighborhood which can be a subset or all particles)
+   * ***a_ind***, ***a_grp***, ***w*** swarm topology and randomness
+   * ***R_ind(i)***, ***R_grp(i)*** random number or matrix
+   
+   Each particle feels forces towards ***p_m,best***, ***p_(m,best neigh)*** and possible further forces that coordinate forces or forbid particles to leave the search domain, etc.
+
+   * Distribute *M* particles on the fitness landscape *D_s*
+   * for each iteration i update each ***v_m(i+1)*** and ***p_m(i+1)***:
+      * v_m(i+1) = w * v_m(i) // inertia or momentum
+                 + a_ind * R_ind(i) * (p_m,best - p_m(i)) // towards individual best
+                 + a_grp * R_grp(i) * (p_(m,best neigh) - p_m(i)) // towards group best
+      * p_m(i+1) = p_m(i) + v_m(i+1)
+      
+      forces increase with larger distances
+   * update ***p_m,best*** and/or ***p_global***
+      
+   
 3. Advantages/Disadvantages
 4. Notes on Python implementation
 
