@@ -1,23 +1,59 @@
 # **Optimization Methods for Engineers** - Paricle Swarm Optimization, Nelder-Mead, Simulated Annealing
 This repository includes sample applications and use cases of optimization methods, mainly particle swarm optimization. It was created as part of the course 'Optimization Methods for Engineers' at ETH Zürich.
 
-Option 1:
-* General discussion of NM, SA, PSO for functions in the context of optimization methods 
-  * strengths & weaknesses, comparison
-* Analyze different optimizers for our implementation of a neural net (Nelder Mead, Simulated Annealing, PSO)
-  * General usability, performance, convergence rate
-  * Try to see strengths & weaknesses for this specific application
+#### Part 1: Analysing optimizers on typical test functions for optimization
+##### **Test function 1 (Rastrigin?):**
+1. Optimization with PSO:
+    * Optimization
+    * Plot cost history
+    * Visualization in 2D
+    * Visualization in 3D 
+    * Analysis of good choice of hyperparameters 
+    
+    
+2. Comparison with Nelder Mead:
+    * Performance
+    * Convergence rate
+    * Complexity
+    
+    
+3. Comparison with Simulated Annealing: 
+    * Performance
+    * Convergence rate
+    * Complexity
 
-Option 2:
-* The idea is as follows: We select some particular functions that are interesting in the context of optimization methods. For each of those functions, we create a notebook that includes a description of the function, the discussion of particle swarm optimization when applied to this problem as well as the results. Visualizations are always very much appreciated. See the example notebooks as reference on how to implement these ideas.
 
-The current selection of functions is:
-  * Rosenbrock https://en.wikipedia.org/wiki/Rosenbrock_function
-  * Himmelblau https://en.wikipedia.org/wiki/Himmelblau%27s_function
-  * ...
+##### **Test function 2 (TBD):**
+1. Optimization with PSO:
+    * Optimization
+    * Plot cost history
+    * Visualization in 2D
+    * Visualization in 3D 
+    * Analysis of good choice of hyperparameters 
+    
+    
+2. Comparison with Nelder Mead:
+    * Performance
+    * Convergence rate 
+    * Complexity
+    
+    
+3. Comparison with Simulated Annealing: 
+    * Performance
+    * Convergence rate
+    * Complexity
 
-What holds for both: find good heuristics (e.g. good selection of hyperparameters) for optimizers.
+##### **Discussion:**
+1. Strengths
+2. Weaknesses
 
+#### Part 2: Analysing PSO, NM and SA for neural network training
+Neural networks are a way of parametrizing non-linear functions. Usually, the training of a neural network is done via different variants of gradient descent, i.e. trying to find a good choice of weights by minimizing the loss function.
+
+What we do here in this notebook is another approach: instead of using a gradient based method that does the fitting of the network, we want to apply the particle swarm optimization, simulated annealing and Nelder Mead algorithms to find a good choice of weights. Our application is classical binary classification. The discussion includes:
+* Our own implementation of a neural net, forward propagation and loss function
+* An interactive example and visualization for binary classification, where one can choose different hyperparameters
+* Usability and performance of these optimizers for neural net training
 
 
 ## Developing
@@ -35,3 +71,7 @@ Credits belong to:
 * The contributors to the PySwarm Toolkit: https://github.com/ljvmiranda921/pyswarms
 * Code from Sebastian Curi and Andreas Krause, based on Jaques Grobler (sklearn demos). This was taken from the Introduction to Machine Learning lecture at ETH.
 
+# License
+All code in this repository is published under the terms of the [MIT License](LICENSE)
+
+© [Alexander Haegele](https://github.com/haeggee), [Richard von der Horst](https://github.com/RichardVDH), [Paul Elvinger](https://github.com/elvingerpaul)
