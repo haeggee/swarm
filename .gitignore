@@ -132,5 +132,5 @@ dmypy.json
 .vscode/
 
 # .gif Plots
-*.gif
+# *.gif
 
