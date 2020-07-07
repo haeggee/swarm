@@ -1,4 +1,4 @@
-# **Optimization Methods for Engineers** - Paricle Swarm Optimization, Nelder-Mead, Simulated Annealing
+# **Optimization Methods for Engineers** - Particle Swarm Optimization, Nelder-Mead
 This repository includes sample applications and use cases of optimization methods, mainly particle swarm optimization. It was created as part of the course 'Optimization Methods for Engineers' at ETH Zürich.
 
 #### Part 1: Analysing optimizers on typical test functions for optimization
@@ -38,7 +38,7 @@ Please consider the rule to always push your changes to the notebook only **AFTE
 ## Bonus
 * **Neural Network:** ~~If time is enough, a nice idea is to implement and fine-tune a certain neural-network for an existing dataset (see https://pyswarms.readthedocs.io/en/latest/examples/usecases/train_neural_network.html as a reference)~~ **Implemented!** TODO-list can be found in the notebook.
 * **Bee algorithm:** Also, it would be cool the test the bees algorithm (https://en.wikipedia.org/wiki/Bees_algorithm), which is a special case of the generic particle swarm idea. To implement this, we would have to write our own optimization loop where we differentiate between the different types of bees when updating the positions (scouts, etc.). To see how to implement our own optimization method, we can refer to https://pyswarms.readthedocs.io/en/latest/examples/tutorials/custom_optimization_loop.html
-* Simulated Annealing for our problems. We implemented the basic algorithm, but sadly did not find the time to test and use it.
+* **Simulated Annealing** for our problems. We implemented the basic algorithm, but sadly did not find the time to test and use it.
 
 # Credits
 Credits belong to:
