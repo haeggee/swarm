@@ -43,9 +43,9 @@ Please consider the rule to always push your changes to the notebook only **AFTE
 # Credits
 Credits belong to:
 * The contributors to the PySwarm Toolkit: https://github.com/ljvmiranda921/pyswarms
-* Code (mostly plot helpers) from the Introduction to Machine Learning lecture at ETH. See https://las.inf.ethz.ch/teaching/introml-s20
+* Andreas Krause and the Introduction to Machine Learning lecture at ETH. Some code and plot helpers were reused. See https://las.inf.ethz.ch/teaching/introml-s20
 
 # License
 All code in this repository is published under the terms of the [MIT License](LICENSE)
 
-© [Alexander Haegele](https://github.com/haeggee), [Richard von der Horst](https://github.com/RichardVDH), [Paul Elvinger](https://github.com/elvingerpaul)
+© July 2020 [Alexander Haegele](https://github.com/haeggee), [Richard von der Horst](https://github.com/RichardVDH), [Paul Elvinger](https://github.com/elvingerpaul)
