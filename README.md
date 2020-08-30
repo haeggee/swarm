@@ -1,5 +1,5 @@
-# **Optimization Methods for Engineers** - Particle Swarm Optimization, Nelder-Mead
-This repository includes sample applications and use cases of optimization methods, mainly particle swarm optimization. It was created as part of the course 'Optimization Methods for Engineers' at ETH Zürich.
+# **Optimization Methods for Engineers** - Particle Swarm Optimization, Nelder-Mead [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/haeggee/swarm/master)
+This repository includes sample applications and use cases of optimization methods, mainly particle swarm optimization. It was created as part of the course 'Optimization Methods for Engineers' at ETH Zürich. Go to https://mybinder.org/v2/gh/haeggee/swarm/master to play around with the notebooks yourself!
 
 #### Part 1: Analysing optimizers on typical test functions for optimization
 ##### **Test functions (Rastrigin, McCormick, Easom):**
