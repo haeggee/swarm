@@ -31,7 +31,7 @@ What we do here in this notebook is another approach: instead of using a gradien
 
 ## Developing
 
-All notebooks depend on and use Matplotlib, NumPy, PySwarms, Sklearn, and SciPy. The Python version used is 3.8. Note that we do not have a specific version list.
+All notebooks depend on and use Matplotlib, NumPy, PySwarms, Sklearn, and SciPy. The Python version used is 3.8. See [`requirements.txt`](https://github.com/haeggee/swarm/blob/master/requirements.txt).
 
 Please consider the rule to always push your changes to the notebook only **AFTER** restarting the kernel and executing all cells starting from the first to ensure a working notebook.
 
