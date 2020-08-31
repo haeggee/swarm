@@ -20,10 +20,10 @@ This repository includes sample applications and use cases of optimization metho
 1. Strengths
 2. Weaknesses
 
-#### Part 2: Analysing PSO, NM and SA for neural network training
+#### Part 2: Analysing PSO, NM for neural network training
 Neural networks are a way of parametrizing non-linear functions. Usually, the training of a neural network is done via different variants of gradient descent, i.e. trying to find a good choice of weights by minimizing the loss function.
 
-What we do here in this notebook is another approach: instead of using a gradient based method that does the fitting of the network, we want to apply the particle swarm optimization, simulated annealing and Nelder Mead algorithms to find a good choice of weights. Our application is classical binary classification. The discussion includes:
+What we do here in this notebook is another approach: instead of using a gradient based method that does the fitting of the network, we want to apply the particle swarm optimization and Nelder Mead algorithms to find a good choice of weights. Our application is classical binary classification. The discussion includes:
 * Our own implementation of a neural net, forward propagation and loss function
 * An interactive example and visualization for binary classification, where one can choose different hyperparameters
 * Usability and performance of these optimizers for neural net training
